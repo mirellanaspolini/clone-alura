@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alura | Cursos online de Tecnologia</title>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/scss/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header-bg">
+            <header class="container">
+                <div style="display:flex; position: relative; gap: 10px;">
+                    <img width="95" src="/img/logos/alura.svg" alt="Logo alura" />
+                    <input placeholder="O que você quer aprender?" type="search" id="inputBusca"> <!-- after com a lupinha -->
+                    <svg id="iconeBusca" width="18" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
+                        <g>
+                          <path fill="#ffffff" d="m495,466.1l-119.2-119.2c29.1-35.5 46.5-80.8 46.5-130.3 0-113.5-92.1-205.6-205.6-205.6-113.6,0-205.7,92.1-205.7,205.7s92.1,205.7 205.7,205.7c49.4,0 94.8-17.4 130.3-46.5l119.1,119.1c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9zm-443.2-249.4c-1.42109e-14-91 73.8-164.8 164.8-164.8 91,0 164.8,73.8 164.8,164.8s-73.8,164.8-164.8,164.8c-91,0-164.8-73.8-164.8-164.8z"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <nav>
+                    <ul class="header-list texto-branco d-flex">
+                        <li><a class="header-list_link" href="#">nossas formações</a></li>
+                        <li><a class="header-list_link" href="#">para empresas</a></li>
+                        <li><a class="header-list_link" href="#">dev em &lt;t&gt;</a></li>
+                        <div class="d-flex" >
+                            <li><a class="header-list_link" href="#">entrar</a></li>
+                            <span>|</span>
+                            <li><a id="btn-matricula" class="header-list_link" href="#">matricule-se</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="mergulhe" class="texto-branco container">
+                <div class="mergulhe-textos">
+                    <h1>Mergulhe em Tecnologia!</h1>
+                    <p>Você vai estudar, praticar, discutir e se aprofundar em uma plataforma que respira tecnologia.</p>
+                </div>
+
+                <div class="d-grid">
+                    <div style="grid-area: a;" class="card">
+                        <img class="card-img" src="/img/icones/programacao.jpg" alt="">
+                        <h2 style="color: #00c86f;" class="card-titulo">programação</h2>
+                        <ul class="card-list">
+                            <a href="#">Lógica</a>
+                            <a href="#">Python</a>
+                            <a href="#">PHP</a>
+                            <a href="#">Java</a>
+                            <a href="#">.NET</a>
+                            <a href="#">Node JS</a>
+                            <a href="#">C</a>
+                            <a href="#">Computação</a>
+                            <a href="#">Jogos</a>
+                            <a href="#">IoT</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: b;" class="card">
+                        <img class="card-img" src="/img/icones/front-end.jpg" alt="">
+                        <h2 style="color: #6bd1ff;" class="card-titulo">front-end</h2>
+                        <ul class="card-list">
+                            <a href="#">HTML</a>
+                            <a href="#">CSS</a>
+                            <a href="#">React</a>
+                            <a href="#">Angular</a>
+                            <a href="#">JavaScript</a>
+                            <a href="#">jQuery</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: c;" class="card">
+                        <img class="card-img" src="/img/icones/data-science.jpg" alt="">
+                        <h2 style="color: #9cd33b;" class="card-titulo">data science</h2>
+                        <ul class="card-list">
+                            <a href="#">Ciência de dados</a>
+                            <a href="#">BI</a>
+                            <a href="#">SQL e Banco de Dados</a>
+                            <a href="#">Excel</a>
+                            <a href="#">Machine Learning</a>
+                            <a href="#">NoSQL</a>
+                            <a href="#">Estatística</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: d;" class="card">
+                        <img class="card-img" src="/img/icones/devops.jpg" alt="">
+                        <h2 style="color: #f16165;" class="card-titulo">devops</h2>
+                        <ul class="card-list">
+                            <a href="#">AWS</a>
+                            <a href="#">Azure</a>
+                            <a href="#">Docker</a>
+                            <a href="#">Segurança</a>
+                            <a href="#">IaC</a>
+                            <a href="#">Linux</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: e;" class="card">
+                        <img class="card-img" src="/img/icones/ux-design.jpg" alt="">
+                        <h2 style="color: #dc6ebe;" class="card-titulo">UX & design</h2>
+                        <ul class="card-list">
+                            <a href="#">Usabilidade e UX</a>
+                            <a href="#">Vídeo e Motion</a>
+                            <a href="#">3D</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: f;" class="card">
+                        <img class="card-img" src="/img/icones/mobile.jpg" alt="">
+                        <h2 style="color: #ffba05;" class="card-titulo">mobile</h2>
+                        <ul class="card-list">
+                            <a href="#">React Native</a>
+                            <a href="#">Flutter</a>
+                            <a href="#">iOS e Swift</a>
+                            <a href="#">Android</a>
+                            <a href="#">Kotlin</a>
+                            <a href="#">Jogos</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                    <div style="grid-area: g;" class="card">
+                        <img class="card-img" src="/img/icones/inovacao-gestao.jpg" alt="">
+                        <h2 style="color: #ff8c2a;" class="card-titulo">inovação & gestão</h2>
+                        <ul class="card-list">
+                            <a href="#">Métodos Ágeis</a>
+                            <a href="#">Softskills</a>
+                            <a href="#">Liderança e Gestão</a>
+                            <a href="#">Startups</a>
+                            <a href="#">Vendas</a>
+                            <a href="#">e mais...</a>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

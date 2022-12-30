@@ -1,0 +1,393 @@
+body {
+  font-family: Inter, sans-serif;
+}
+body .d-flex {
+  display: flex;
+  align-items: center;
+}
+body .texto-branco {
+  color: #ffffff;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+body .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  body .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  body .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  body .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  body .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  body .container {
+    max-width: 1320px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header-bg {
+  position: relative;
+  background-image: radial-gradient(circle at 95% 68%, #0a3871, #051933 58%);
+  margin-bottom: -1em;
+  height: 46em;
+}
+.header-bg::after {
+  content: "";
+  width: 100vw;
+  height: 100px;
+  background-color: #fff;
+  display: block;
+  transform: rotate(358deg);
+  position: absolute;
+  bottom: -68px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 34px 30px;
+  margin: 0 auto 20px;
+}
+header #inputBusca {
+  background-color: #051933;
+  color: #ffffff;
+  height: 52px;
+  border: 1px solid #828c99;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header #inputBusca::-moz-placeholder {
+  color: #919199;
+}
+header #inputBusca:-ms-input-placeholder {
+  color: #919199;
+}
+header #inputBusca::placeholder {
+  color: #919199;
+}
+header #iconeBusca {
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 20px;
+  cursor: pointer;
+}
+header .header-list {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  justify-content: end;
+}
+header .header-list .header-list_link {
+  padding: 8px 12px 8px 0;
+}
+header .header-list #btn-matricula {
+  background-color: #a3ffbf;
+  padding: 20px 40px;
+  border-radius: 30px;
+  color: #051933;
+  font-size: 13px;
+  margin-left: 34px;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.d-grid {
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-areas: "a b c ." "d e f g";
+  position: absolute;
+  z-index: 9;
+}
+
+#mergulhe {
+  margin: 0 auto;
+  position: relative;
+}
+#mergulhe::after {
+  content: "";
+  background-image: url(/img/ilustracoes/escafandro.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20em;
+  height: 33em;
+  display: block;
+  transition: 0.5s;
+}
+#mergulhe .mergulhe-textos {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 9;
+}
+#mergulhe h1 {
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: 900;
+}
+#mergulhe p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #e5f1ff;
+}
+#mergulhe .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #051c3a;
+  border: 1px solid #0a3e80;
+  border-radius: 8px;
+}
+#mergulhe .card:hover {
+  -webkit-animation: efeito-card ease-in-out 0.3s forwards;
+          animation: efeito-card ease-in-out 0.3s forwards;
+  border-color: #14519e;
+}
+@-webkit-keyframes efeito-card {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes efeito-card {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+#mergulhe .card .card-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+#mergulhe .card .card-titulo {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 13px;
+  margin: 5px 0;
+}
+#mergulhe .card .card-titulo::before {
+  content: "escola_";
+  display: block;
+  font-family: monospace;
+  text-transform: capitalize;
+  margin-bottom: 7px;
+}
+#mergulhe .card .card-list {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+}
+#mergulhe .card .card-list a {
+  font-size: 12px;
+  color: #e5f1ff;
+}
+#mergulhe .card .card-list a:hover {
+  text-decoration: underline;
+}
+#mergulhe .card .card-list a::after {
+  content: ",";
+}
+#mergulhe .card .card-list a:last-child:after {
+  content: none;
+}
+
+@media (max-width: 1200px) {
+  header .header-list .header-list_link {
+    padding: 8px 25px 8px 0px;
+  }
+  #mergulhe::after {
+    width: 23em;
+    height: 37em;
+    right: 0;
+    top: 1.1em;
+  }
+}
+@media (min-width: 1100px) {
+  .mergulhe-textos {
+    width: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  header .header-list_link {
+    padding: 8px 12px 8px 0px !important;
+    margin-right: 8px;
+  }
+  header #btn-matricula {
+    font-size: 12px;
+  }
+  #mergulhe .mergulhe-textos {
+    width: 65%;
+  }
+  #mergulhe h1 {
+    font-size: 36px;
+  }
+  #mergulhe::after {
+    width: 13.437em;
+    height: 32.75em;
+    right: 0;
+    top: 5em;
+  }
+  .d-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b " "c d" "e f" "g .";
+  }
+  .d-grid .card {
+    height: auto !important;
+    min-height: auto;
+  }
+  .d-grid .card-img {
+    display: none;
+  }
+  .d-grid .card-list {
+    display: none !important;
+  }
+}
+@media (max-width: 1100px) {
+  #btn-matricula {
+    padding: 13px 25px !important;
+  }
+}
+@media (min-width: 765px) {
+  .d-grid {
+    max-width: 65% !important;
+  }
+}
+@media (max-width: 750px) {
+  header div > img {
+    width: 80px;
+  }
+  header #inputBusca, header #iconeBusca {
+    display: none;
+  }
+  header .header-list {
+    position: relative;
+    margin-top: 0 !important;
+    padding: 17px 0;
+    border: 1px solid #fff;
+    border-left: none;
+    border-right: none;
+    justify-content: space-around !important;
+  }
+  header .header-list div {
+    position: absolute;
+    bottom: 100%;
+    height: 70px;
+    left: calc(100% - 217.34px);
+  }
+  header .header-list .header-list_link {
+    width: 30%;
+  }
+  #mergulhe::after {
+    display: none;
+  }
+  .d-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a b c" " d e f" "g . .";
+    gap: 5px;
+  }
+  .d-grid .card {
+    height: auto !important;
+  }
+  .d-grid .card-img {
+    display: none;
+  }
+  .d-grid .card-list {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+  header #inputBusca {
+    height: 60px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  header nav, header div {
+    width: 100%;
+  }
+  header > div {
+    justify-content: space-between;
+  }
+  header > div img {
+    margin-right: 55px;
+  }
+  header .header-list {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+  }
+  header .header-list div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header .header-list div span {
+    display: none;
+  }
+  header .header-list div #btn-matricula {
+    margin-left: 8px;
+    padding: 15px 23px !important;
+  }
+}
+@media (max-width: 550px) {
+  .d-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b " "c d" "e f" "g .";
+  }
+  .d-grid .card {
+    height: auto !important;
+  }
+  .d-grid .card-img {
+    display: none;
+  }
+  .d-grid .card-list {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  header .header-list div #btn-matricula, body > div > header > nav > ul > div > li:nth-child(1) > a {
+    margin: 0 !important;
+  }
+  header .header-list div {
+    left: calc(100% - 201.34px) !important;
+  }
+}/*# sourceMappingURL=style.css.map */
