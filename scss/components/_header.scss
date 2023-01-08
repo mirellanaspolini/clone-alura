@@ -21,7 +21,7 @@ body {
     }
 }
 
-header {
+#header {
     display: grid;
     grid-template-columns: .8fr 1fr;
     align-items: center;
@@ -135,14 +135,11 @@ header {
         background-color: #051c3a;
         border: 1px solid #0a3e80;
         border-radius: 8px;
+        transition: .3s;
 
-        &:hover {
-            animation: efeito-card ease-in-out 0.3s forwards;
-            border-color: #14519e;
-        }
-
-        @keyframes efeito-card {
-            100% {
+        @media(min-width: 1000px) {
+            &:hover {
+                border-color: #2f72c7;
                 transform: translateY(-10px);
             }
         }
@@ -189,7 +186,7 @@ header {
 }
 
 @media(max-width: 1200px) {
-    header {
+    #header {
         .header-list {
             .header-list_link {
                 padding: 8px 25px 8px 0px;
@@ -213,7 +210,7 @@ header {
 }
 
 @media (max-width: 1000px) {
-    header {
+    #header {
         .header-list_link {
             padding: 8px 12px 8px 0px !important;
             margin-right: 8px;
@@ -272,7 +269,7 @@ header {
 }
 
 @media (max-width: 750px) {
-    header {
+    #header {
         div > img {
             width: 80px;
         }
@@ -325,7 +322,7 @@ header {
 }
 
 @media (max-width: 992px) {
-    header {
+    #header {
         grid-template-columns: 1fr;
 
         #inputBusca {
@@ -390,10 +387,10 @@ header {
 }
 
 @media(max-width: 380px) {
-    header .header-list div #btn-matricula, body > div > header > nav > ul > div > li:nth-child(1) > a {
+    #header .header-list div #btn-matricula, body > div > header > nav > ul > div > li:nth-child(1) > a {
         margin: 0 !important;
     }
-    header {
+    #header {
         .header-list {
             div {
                 left: calc(100% - 201.34px) !important;

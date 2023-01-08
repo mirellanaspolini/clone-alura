@@ -5,6 +5,9 @@ body .d-flex {
   display: flex;
   align-items: center;
 }
+body strong, body h1 {
+  font-weight: bold;
+}
 body .texto-branco {
   color: #ffffff;
 }
@@ -65,7 +68,7 @@ body {
   bottom: -68px;
 }
 
-header {
+#header {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   align-items: center;
@@ -75,7 +78,7 @@ header {
   padding: 34px 30px;
   margin: 0 auto 20px;
 }
-header #inputBusca {
+#header #inputBusca {
   background-color: #051933;
   color: #ffffff;
   height: 52px;
@@ -86,31 +89,31 @@ header #inputBusca {
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
-header #inputBusca::-moz-placeholder {
+#header #inputBusca::-moz-placeholder {
   color: #919199;
 }
-header #inputBusca:-ms-input-placeholder {
+#header #inputBusca:-ms-input-placeholder {
   color: #919199;
 }
-header #inputBusca::placeholder {
+#header #inputBusca::placeholder {
   color: #919199;
 }
-header #iconeBusca {
+#header #iconeBusca {
   position: absolute;
   top: calc(50% - 9px);
   right: 20px;
   cursor: pointer;
 }
-header .header-list {
+#header .header-list {
   text-transform: uppercase;
   font-size: 11px;
   font-weight: bold;
   justify-content: end;
 }
-header .header-list .header-list_link {
+#header .header-list .header-list_link {
   padding: 8px 12px 8px 0;
 }
-header .header-list #btn-matricula {
+#header .header-list #btn-matricula {
   background-color: #a3ffbf;
   padding: 20px 40px;
   border-radius: 30px;
@@ -173,19 +176,11 @@ header .header-list #btn-matricula {
   background-color: #051c3a;
   border: 1px solid #0a3e80;
   border-radius: 8px;
+  transition: 0.3s;
 }
-#mergulhe .card:hover {
-  -webkit-animation: efeito-card ease-in-out 0.3s forwards;
-          animation: efeito-card ease-in-out 0.3s forwards;
-  border-color: #14519e;
-}
-@-webkit-keyframes efeito-card {
-  100% {
-    transform: translateY(-10px);
-  }
-}
-@keyframes efeito-card {
-  100% {
+@media (min-width: 1000px) {
+  #mergulhe .card:hover {
+    border-color: #2f72c7;
     transform: translateY(-10px);
   }
 }
@@ -228,7 +223,7 @@ header .header-list #btn-matricula {
 }
 
 @media (max-width: 1200px) {
-  header .header-list .header-list_link {
+  #header .header-list .header-list_link {
     padding: 8px 25px 8px 0px;
   }
   #mergulhe::after {
@@ -244,11 +239,11 @@ header .header-list #btn-matricula {
   }
 }
 @media (max-width: 1000px) {
-  header .header-list_link {
+  #header .header-list_link {
     padding: 8px 12px 8px 0px !important;
     margin-right: 8px;
   }
-  header #btn-matricula {
+  #header #btn-matricula {
     font-size: 12px;
   }
   #mergulhe .mergulhe-textos {
@@ -289,13 +284,13 @@ header .header-list #btn-matricula {
   }
 }
 @media (max-width: 750px) {
-  header div > img {
+  #header div > img {
     width: 80px;
   }
-  header #inputBusca, header #iconeBusca {
+  #header #inputBusca, #header #iconeBusca {
     display: none;
   }
-  header .header-list {
+  #header .header-list {
     position: relative;
     margin-top: 0 !important;
     padding: 17px 0;
@@ -304,13 +299,13 @@ header .header-list #btn-matricula {
     border-right: none;
     justify-content: space-around !important;
   }
-  header .header-list div {
+  #header .header-list div {
     position: absolute;
     bottom: 100%;
     height: 70px;
     left: calc(100% - 217.34px);
   }
-  header .header-list .header-list_link {
+  #header .header-list .header-list_link {
     width: 30%;
   }
   #mergulhe::after {
@@ -332,38 +327,38 @@ header .header-list #btn-matricula {
   }
 }
 @media (max-width: 992px) {
-  header {
+  #header {
     grid-template-columns: 1fr;
   }
-  header #inputBusca {
+  #header #inputBusca {
     height: 60px;
     font-size: 14px;
     font-weight: 600;
   }
-  header nav, header div {
+  #header nav, #header div {
     width: 100%;
   }
-  header > div {
+  #header > div {
     justify-content: space-between;
   }
-  header > div img {
+  #header > div img {
     margin-right: 55px;
   }
-  header .header-list {
+  #header .header-list {
     justify-content: space-between;
     display: flex;
     width: 100%;
     margin-top: 25px;
   }
-  header .header-list div {
+  #header .header-list div {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  header .header-list div span {
+  #header .header-list div span {
     display: none;
   }
-  header .header-list div #btn-matricula {
+  #header .header-list div #btn-matricula {
     margin-left: 8px;
     padding: 15px 23px !important;
   }
@@ -384,10 +379,149 @@ header .header-list #btn-matricula {
   }
 }
 @media (max-width: 380px) {
-  header .header-list div #btn-matricula, body > div > header > nav > ul > div > li:nth-child(1) > a {
+  #header .header-list div #btn-matricula, body > div > header > nav > ul > div > li:nth-child(1) > a {
     margin: 0 !important;
   }
-  header .header-list div {
+  #header .header-list div {
     left: calc(100% - 201.34px) !important;
+  }
+}
+#beneficios {
+  padding: 80px 0;
+}
+#beneficios .lista-beneficios {
+  color: #093366;
+}
+#beneficios .lista-beneficios h1 {
+  font-size: 26px;
+  margin: 20px 0;
+}
+#beneficios .lista-beneficios p {
+  line-height: 1.4;
+}
+#beneficios .lista-beneficios img {
+  height: 40px;
+}
+#beneficios .lista-beneficios li {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 750px) {
+  #beneficios {
+    padding: 80px 0;
+  }
+  #beneficios .lista-beneficios {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  #beneficios .lista-beneficios h1 {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+  #beneficios .lista-beneficios li {
+    margin-bottom: 40px;
+  }
+}
+.formacoes-bg {
+  background-image: url(../../img/background/background-v.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#formacoes {
+  padding: 80px 40px;
+  color: #fff;
+}
+#formacoes .formacoes-desc_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#formacoes .formacoes-desc h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+#formacoes .formacoes-desc h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 15px 0 18px;
+}
+#formacoes .formacoes-desc p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+#formacoes .lista-formacoes {
+  display: flex;
+  flex-direction: column;
+}
+#formacoes .lista-formacoes div > li {
+  margin-top: 32px;
+}
+#formacoes .lista-formacoes div > li li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.8;
+  color: #e5f1ff;
+  font-size: 14px;
+}
+#formacoes .lista-formacoes div > li .lista-formacoes_ver-escola {
+  text-decoration: underline;
+}
+#formacoes .lista-formacoes div > li a:hover {
+  color: #c3c3c3;
+}
+#formacoes .lista-formacoes header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#formacoes .lista-formacoes header img {
+  border-radius: 4px;
+  margin-right: 10px;
+}
+#formacoes .lista-formacoes div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 32px;
+}
+#formacoes .lista-formacoes .lista-formacoes_titulo {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.lista-formacoes div:nth-child(1) > li:nth-child(1) .lista-formacoes_titulo {
+  color: #00c86f;
+}
+
+.lista-formacoes div:nth-child(1) > li:nth-child(2) .lista-formacoes_titulo {
+  color: #6bd1ff;
+}
+
+.lista-formacoes div:nth-child(1) > li:nth-child(3) .lista-formacoes_titulo {
+  color: #9cd33b;
+}
+
+.lista-formacoes div:nth-child(2) > li:nth-child(1) .lista-formacoes_titulo {
+  color: #f16165;
+}
+
+.lista-formacoes div:nth-child(2) > li:nth-child(2) .lista-formacoes_titulo {
+  color: #dc6ebe;
+}
+
+.lista-formacoes div:nth-child(2) > li:nth-child(3) .lista-formacoes_titulo {
+  color: #ffba05;
+}
+
+.lista-formacoes div:nth-child(2) > li:nth-child(4) .lista-formacoes_titulo {
+  color: #ff8c2a;
+}
+
+@media (max-width: 1000px) {
+  #formacoes .lista-formacoes div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 32px;
   }
 }/*# sourceMappingURL=style.css.map */
