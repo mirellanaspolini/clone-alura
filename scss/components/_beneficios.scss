@@ -1,5 +1,6 @@
 #beneficios {
-    padding: 80px 0;
+    padding: 80px 40px;
+
     .lista-beneficios {
         color: #093366;
 
@@ -7,11 +8,11 @@
             font-size: 26px;
             margin: 20px 0;
         }
-        
+
         p {
             line-height: 1.4;
         }
-        
+
         img {
             height: 40px;
         }
@@ -24,18 +25,18 @@
 
 @media (min-width: 750px) {
     #beneficios {
-        padding: 80px 0;
+        padding: 180px 0 139px;
+
         .lista-beneficios {
             display: flex;
-            gap: 20px;
             justify-content: space-between;
-    
+            gap: 20px;
+
             h1 {
                 font-size: 26px;
                 margin: 20px 0;
             }
 
-    
             li {
                 margin-bottom: 40px;
             }

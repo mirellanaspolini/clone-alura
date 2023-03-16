@@ -1,25 +1,27 @@
+@import "../abstract/variaveis";
+
 .formacoes-bg {
     background-image: url(../../img/background/background-v.webp);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #formacoes {
     padding: 80px 40px;
-    color: #fff;
+    color: $branco;
 
     .formacoes-desc_wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        transition: 3s;
     }
     .formacoes-desc {
-
         h2 {
             font-size: 16px;
             font-weight: 600;
+            font-family: monospace;
         }
-        
+
         h1 {
             font-size: 40px;
             font-weight: 900;
@@ -33,24 +35,24 @@
     }
     .lista-formacoes {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
 
         div > li {
-            margin-top: 32px; 
+            margin: 32px 0;
 
-        li {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            line-height: 1.8;
-            color: #e5f1ff;
-            font-size: 14px;
-        }
-        .lista-formacoes_ver-escola {
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #c3c3c3;    
+            li {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 1.8;
+                color: $cinza-claro;
+                font-size: 14px;
+            }
+            .lista-formacoes_ver-escola {
+                text-decoration: underline;
+            }
+            a:hover {
+                color: #c3c3c3;
             }
         }
         header {
@@ -71,59 +73,92 @@
         .lista-formacoes_titulo {
             text-transform: uppercase;
             font-weight: 700;
-        }        
+            line-height: 1.3;
+        }
     }
 }
 
-.lista-formacoes div:nth-child(1) > li:nth-child(1) {
-    .lista-formacoes_titulo {
-        color: #00c86f;
+@mixin coresFormacoes($numero, $numero2, $cor) {
+    .lista-formacoes div:nth-child(#{$numero}) > li:nth-child(#{$numero2}) {
+        .lista-formacoes_titulo {
+            color: $cor;
+        }
     }
 }
 
-.lista-formacoes div:nth-child(1) > li:nth-child(2) {
-    .lista-formacoes_titulo {
-        color: #6bd1ff;
+@include coresFormacoes(1, 1, $cor-1);
+@include coresFormacoes(1, 2, $cor-2);
+@include coresFormacoes(1, 3, $cor-3);
+@include coresFormacoes(2, 1, $cor-4);
+@include coresFormacoes(2, 2, $cor-5);
+@include coresFormacoes(2, 3, $cor-6);
+@include coresFormacoes(2, 4, $cor-7);
+
+@each $numero, $hex in $cores {
+    [data-card="#{$numero}"] {
+        color: $hex;
     }
 }
 
-.lista-formacoes div:nth-child(1) > li:nth-child(3) {
-    .lista-formacoes_titulo {
-        color: #9cd33b;
-    }
-}
-
-.lista-formacoes div:nth-child(2) > li:nth-child(1) {
-    .lista-formacoes_titulo {
-        color: #f16165;
-    }
-}
-
-.lista-formacoes div:nth-child(2) > li:nth-child(2) {
-    .lista-formacoes_titulo {
-        color: #dc6ebe;
-    }
-}
-
-.lista-formacoes div:nth-child(2) > li:nth-child(3) {
-    .lista-formacoes_titulo {
-        color: #ffba05;
-    }
-}
-.lista-formacoes div:nth-child(2) > li:nth-child(4) {
-    .lista-formacoes_titulo {
-        color: #ff8c2a;
-    }
-}
-
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
     #formacoes {
+        .formacoes-desc {
+            h2 {
+                color: #167bf7;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
         .lista-formacoes {
             div {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
                 gap: 32px;
             }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #formacoes {
+        .formacoes-desc_wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 715px) {
+    #formacoes {
+        .lista-formacoes {
+            div {
+                display: grid;
+                grid-template-columns: 32% 32% 33.3%;
+                overflow: hidden;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #formacoes {
+        .lista-formacoes {
+            div {
+                margin-top: 36px;
+                grid-template-columns: 1fr;
+
+                > li {
+                    margin: 8px 0;
+                }
+            }
+            div:last-child {
+                margin-top: 20px;
+            }
+        }
+        .formacoes-desc_wrapper {
+            grid-template-columns: 1fr;
+            transition: 3s;
         }
     }
 }
